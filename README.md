@@ -1,13 +1,24 @@
 # More Documents, Same Length: Isolating the Challenge of Multiple Documents in RAG
+This repository contains code and datasets for our paper on the effects of document multiplicity while the context size is fixed in Retrieval-Augmented Generation (RAG) systems.
+For detailed methodology, experiments, and analysis, please refer to the full paper : Paper.pdf.
 
-This repository contains code and datasets for our research on the effects of document multiplicity while the context size is fixed in Retrieval-Augmented Generation (RAG) systems.
+## :bulb: High-Level Conclusions
+Our results indicate that including more documents in the input complicates the task in retrieval settings, highlighting the need for systems to balance relevance and diversity to minimize conflicts. Future models could benefit from mechanisms that identify and discard conflicting information while leveraging the benefits of document variety.
+<div align="center">
+  <img src="/Main_Figure.png" alt="Alt text" width="450">
+</div>
 
-## Download the different benchmark datasets
 
-All the benchmark dataset - control set, original and replaced distractors with varies of document multiplicity - are located in [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link).
+## :desktop_computer:  Reproduction Instructions:
+
+### Download the different benchmark datasets
+Our custom benchmark datasets include a control set, the original dataset, and variants with replaced distractors for varying document multiplicity. 
+Download them here [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link) or regenerate using ```bash scripts/create_various_sets.py```
+ .
 
 
-## Prepare the environment
+
+### Prepare the environment
 
 To set up the running environment, run the following command:
 ```bash
@@ -19,7 +30,7 @@ source <PATH_TO_VENV>/bin/activate
 pip install -r requirements.txt
 ```
 
-## Run predictions
+### Run predictions
 For running in inference on the chosen benchmark dataset you need to define for each benchmark data set a config file under configuration folder [`files/configuration/predict.json`](files/configuration/predict.json).
 
 The `predict.json` file contains the path to the generated benchmark from previous step, the batch size, and the decoding temperature for the LLMs.
@@ -39,7 +50,7 @@ then run the following command:
 python scripts/run_model_predictions.py --config <PATH_TO_CONFIG> --model_name <MODEL_NAME> --run_together
 ```
 
-## Evaluate the predictions
+### Evaluate the predictions
 
 To evaluate the predictions, you can use [`scripts/evaluate_dataset.py`](scripts/evaluate_dataset.py) by providing 
 the path to the predictions from previous step, and output path where all results will be saved.
@@ -48,7 +59,7 @@ the path to the predictions from previous step, and output path where all result
 python scripts/evaluate_dataset.py --predictions_dir <OUTPUT_PATH_FROM_PREV_STEP> --output_path <RESULT_OUTPUT> --ds_name MusiQue
 ```
 
-## Citation
+## :newspaper: Citation
 
 If you use this code or the datasets in your research, please cite:
 
@@ -60,4 +71,5 @@ If you use this code or the datasets in your research, please cite:
   year={2024}
 }
 ```
+
 
