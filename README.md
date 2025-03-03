@@ -5,7 +5,7 @@ For detailed methodology, experiments, and analysis, please refer to the full pa
 ## :bulb: High-Level Conclusions
 Our results indicate that including more documents in the input complicates the task in retrieval settings, highlighting the need for systems to balance relevance and diversity to minimize conflicts. Future models could benefit from mechanisms that identify and discard conflicting information while leveraging the benefits of document variety.
 <div align="center">
-  <img src="/Main_Figure.png" alt="Alt text" width="450">
+  <img src="/Main_Figure_Horizontal.png" alt="Alt text" width="1000">
 </div>
 
 
@@ -13,10 +13,8 @@ Our results indicate that including more documents in the input complicates the 
 
 ### Download the different benchmark datasets
 Our custom benchmark datasets include a control set, the original dataset, and variants with replaced distractors for varying document multiplicity. 
-Download them here [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link) or regenerate using ```bash scripts/create_various_sets.py```
- .
-
-
+You can downlowd them from  [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link)
+Alternatively, regenerate them using  [`scripts/create_various_sets.py`](scripts/create_various_sets.py).
 
 ### Prepare the environment
 
