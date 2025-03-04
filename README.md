@@ -1,13 +1,27 @@
-# More Documents, Same Length: Isolating the Challenge of Multiple Documents in RAG
-This repository contains code and datasets for our paper on the effects of document multiplicity while the context size is fixed in Retrieval-Augmented Generation (RAG) systems.
-For detailed methodology, experiments, and analysis, please refer to the full paper : Paper.pdf.
-
-## :bulb: High-Level Conclusions
-Our results indicate that including more documents in the input complicates the task in retrieval settings, highlighting the need for systems to balance relevance and diversity to minimize conflicts. Future models could benefit from mechanisms that identify and discard conflicting information while leveraging the benefits of document variety.
 <div align="center">
-  <img src="/Main_Figure_Horizontal.png" alt="Alt text" width="1000">
+  <h1>More Documents, Same Length:<br>Isolating the Challenge of Multiple Documents in RAG</h1>
 </div>
 
+MoreDocs is a toolset for studying how the number of documents affects Retrieval-Augmented Generation (RAG) performance when the total amount of tokens stays the same.
+
+This repository contains code and datasets for our paper on the effects of document multiplicity while the context size is fixed in Retrieval-Augmented Generation (RAG) systems.
+For detailed methodology, experiments, and analysis, please refer to the full paper 📰
+
+## 🔬 Our Methodology:
+<div style="max-width: 400px; margin: 0 auto;">
+Starting with a Wikipedia-derived dataset, we created different sets with the same amount of tokens but fewer documents by adjusting the length of the key documents for each question.
+Our sets use the same multi-hop questions and supporting documents <b>(pink)</b> with key info, while varying distractor documents <b>(blue)</b>.
+We began with 20 documents, then omitted redundant ones while lengthening the remaining ones to match the original size.
+</div>
+
+
+<div align="center">
+  <img src="/Main_Fig_Horizontal.png" alt="Alt text" width="800">
+</div>
+
+## :bulb: High-Level Conclusions
+Our results show that adding more retrieved documents can hurt performance—up to a 10% drop in fixed-context setups—making document rich retrieval tasks harder. 
+Llama-3.1 and Gemma-2 declined, Qwen-2 stayed steady, and smaller LLMs (7–9B) followed the trend less strongly. This suggests systems need to balance relevance and variety to cut conflicts, and future models might improve by filtering out contradictory details while using the range of documents.
 
 ## :desktop_computer:  Reproduction Instructions:
 
