@@ -11,7 +11,7 @@ For detailed methodology, experiments, and analysis, please refer to the full pa
 ## 🔬 Our Methodology:
 <div style="max-width: 400px; margin: 0 auto;">
 Starting with a Wikipedia-derived dataset, we created different sets with the same amount of tokens but fewer documents by adjusting the length of the key documents for each question.
-Our sets use the same multi-hop questions and supporting documents <b>(pink)</b> with key info, while varying distractor documents <b>(blue)</b>.
+Our sets use the same multi-hop questions and supporting documents with key info <b>(pink)</b> , while varying distractor documents <b>(blue)</b>.
 We began with 20 documents, then omitted redundant ones while lengthening the remaining ones to match the original size.
 </div>
 
