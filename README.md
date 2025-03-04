@@ -1,5 +1,6 @@
 <div align="center">
   <h1>More Documents, Same Length:<br>Isolating the Challenge of Multiple Documents in RAG</h1>
+  <h3>Link to arxiv</h3>
 </div>
 
 MoreDocs is a toolset for studying how the number of documents affects Retrieval-Augmented Generation (RAG) performance when the total amount of tokens stays the same.
@@ -13,6 +14,13 @@ Starting with a Wikipedia-derived dataset, we created different sets with the sa
 Our sets use the same multi-hop questions and supporting documents <b>(pink)</b> with key info, while varying distractor documents <b>(blue)</b>.
 We began with 20 documents, then omitted redundant ones while lengthening the remaining ones to match the original size.
 </div>
+
+**This figure demonstrates how we expanded the documents and built sets:** <br>
+<br>
+
+
+
+
 
 
 <div align="center">
