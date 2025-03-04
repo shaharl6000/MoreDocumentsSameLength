@@ -35,7 +35,7 @@ Llama-3.1 and Gemma-2 declined, Qwen-2 stayed steady, and smaller LLMs (7–9B) 
 
 ### Download the different benchmark datasets
 Our custom benchmark datasets include a control set, the original dataset, and variants with replaced distractors for varying document multiplicity. 
-You can downlowd them from  [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link)
+You can Download them from  [here](https://drive.google.com/file/d/1z6L0Xl0zhRoOOpwD5WuQI9ukSaEgCraM/view?usp=drive_link)
 Alternatively, regenerate them using  [`scripts/create_various_sets.py`](scripts/create_various_sets.py).
 
 ### Prepare the environment
