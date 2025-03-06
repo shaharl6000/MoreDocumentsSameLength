@@ -8,6 +8,10 @@ MoreDocs is a toolset for studying how the number of documents affects Retrieval
 This repository contains code and datasets for our paper on the effects of document multiplicity while the context size is fixed in Retrieval-Augmented Generation (RAG) systems.
 For detailed methodology, experiments, and analysis, please refer to the full paper 📰
 
+## :bulb: High-Level Conclusions
+Our results show that adding more retrieved documents can hurt performance—up to a 10% drop in fixed-context setups—making document rich retrieval tasks harder. 
+Llama-3.1 and Gemma-2 declined, Qwen-2 stayed steady, and smaller LLMs (7–9B) followed the trend less strongly. This suggests systems need to balance relevance and variety to cut conflicts, and future models might improve by filtering out contradictory details while using the range of documents.
+
 ## 🔬 Our Methodology:
 <div style="max-width: 400px; margin: 0 auto;">
 Starting with a Wikipedia-derived dataset, we created different sets with the same amount of tokens but fewer documents by adjusting the length of the key documents for each question.
@@ -27,9 +31,6 @@ We began with 20 documents, then omitted redundant ones while lengthening the re
   <img src="/Main_Fig_Horizontal.png" alt="Alt text" width="800">
 </div>
 
-## :bulb: High-Level Conclusions
-Our results show that adding more retrieved documents can hurt performance—up to a 10% drop in fixed-context setups—making document rich retrieval tasks harder. 
-Llama-3.1 and Gemma-2 declined, Qwen-2 stayed steady, and smaller LLMs (7–9B) followed the trend less strongly. This suggests systems need to balance relevance and variety to cut conflicts, and future models might improve by filtering out contradictory details while using the range of documents.
 
 ## :desktop_computer:  Reproduction Instructions:
 
