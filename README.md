@@ -18,8 +18,7 @@ Starting with a Wikipedia-derived dataset, we created different sets with the sa
 Our sets use the same multi-hop questions and supporting documents with key info <b>(pink)</b> , while varying distractor documents <b>(blue)</b>.
 We began with 20 documents, then omitted redundant ones while lengthening the remaining ones to match the original size.
 </div>
-
-**This figure demonstrates how we expanded the documents and built sets:** <br>
+ <br>
 <br>
 
 
